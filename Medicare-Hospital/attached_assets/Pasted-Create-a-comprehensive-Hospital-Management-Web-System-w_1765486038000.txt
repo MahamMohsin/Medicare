@@ -1,0 +1,143 @@
+Create a comprehensive Hospital Management Web System with the following specifications:
+
+SYSTEM OVERVIEW:
+Build a centralized, role-based hospital management platform that handles patient registration, appointments, doctor activities, lab management, ward/bed allocation, and billing. The system should be a single-page application with persistent data storage.
+
+CORE MODULES & FEATURES:
+
+1. USER ROLES & AUTHENTICATION:
+- Admin, Doctor, Lab Staff, Nurse, Patient, Receptionist
+- Secure login with role-based access control
+- Dashboard customized per role
+- Profile management for each user type
+
+2. PATIENT MANAGEMENT:
+- Patient registration with complete demographics (name, age, gender, contact, address, emergency contact, blood group, medical history)
+- Unique patient ID generation
+- Medical history tracking
+- Visit history with date, doctor, diagnosis, prescriptions
+- Search and filter patients by ID, name, or contact
+- Patient profile view with complete medical records
+
+3. APPOINTMENT SYSTEM:
+- Book appointments with doctor selection, date/time, department
+- View appointment calendar (daily/weekly/monthly views)
+- Appointment status: Scheduled, Completed, Cancelled, No-show
+- Real-time availability checking to prevent double booking
+- Appointment reminders and notifications
+- Reschedule and cancel functionality
+- Queue management for walk-in patients
+
+4. DOCTOR MODULE:
+- Doctor profile (specialization, qualifications, schedule, consultation fee)
+- View assigned appointments
+- Patient consultation interface
+- Prescription creation and management
+- Lab test ordering from consultation
+- Patient notes and diagnosis recording
+- Appointment history and patient follow-ups
+
+5. LABORATORY MANAGEMENT:
+- Lab test catalog (test names, normal ranges, prices, sample types)
+- Test request creation from doctor orders
+- Sample collection tracking
+- Test status workflow: Pending → Sample Collected → In Progress → Completed
+- Lab report generation with results entry
+- Report viewing and download (PDF)
+- Integration with patient records
+
+6. WARD & BED MANAGEMENT:
+- Ward listing (General, ICU, Private, Semi-private)
+- Real-time bed availability tracking
+- Bed allocation to admitted patients
+- Patient admission form (admission date, ward type, assigned bed, attending doctor)
+- Bed status: Available, Occupied, Under Maintenance, Reserved
+- Patient discharge process
+- Ward transfer functionality
+- Bed occupancy reports
+
+7. BILLING SYSTEM:
+- Automated bill generation for:
+  * Consultation fees
+  * Lab tests
+  * Ward charges (per day calculation)
+  * Procedures and medications
+- Invoice creation with itemized breakdown
+- Payment recording (Cash, Card, Insurance, UPI)
+- Payment status: Paid, Partial, Pending
+- Bill history per patient
+- Financial reports and summaries
+- Discount and insurance claim management
+
+8. ADMINISTRATIVE FEATURES:
+- Department management
+- Staff management (add/edit/delete doctors, nurses, lab staff)
+- Hospital configuration (working hours, holidays)
+- User access control and permissions
+- System activity logs
+- Backup and data export functionality
+
+9. REPORTING & ANALYTICS:
+- Patient registration trends
+- Appointment statistics (by doctor, department, time period)
+- Revenue reports (daily, weekly, monthly)
+- Lab test volume analysis
+- Bed occupancy rates
+- Department-wise performance metrics
+- Exportable reports (CSV/PDF)
+
+TECHNICAL REQUIREMENTS:
+
+Frontend:
+- React.js with modern hooks
+- Tailwind CSS for responsive design
+- React Router for navigation
+- Recharts for data visualization
+- Lucide React for icons
+- Modern, clean UI with intuitive navigation
+
+Backend Storage:
+- Use window.storage API for persistent data (NOT localStorage/sessionStorage)
+- Implement proper data models for all entities
+- Use hierarchical keys: 'patients:ID', 'appointments:ID', 'bills:ID', etc.
+- Handle data relationships (patient-appointments, patient-bills, etc.)
+
+Key Features:
+- Fully functional CRUD operations for all modules
+- Real-time data updates across components
+- Form validation with error handling
+- Search, filter, and sort capabilities
+- Responsive design for desktop and tablet
+- Print-friendly views for reports and bills
+- Date/time pickers for appointments
+- Status badges and visual indicators
+- Confirmation dialogs for critical actions
+- Success/error notifications
+
+DESIGN REQUIREMENTS:
+- Professional healthcare theme (blues, greens, whites)
+- Clean, minimal interface with clear information hierarchy
+- Card-based layouts for data display
+- Sidebar navigation with role-based menu items
+- Dashboard with key metrics and quick actions
+- Tables with pagination for list views
+- Modal dialogs for forms and detailed views
+- Accessible color contrasts and readable fonts
+
+INITIAL DATA:
+Pre-populate with sample data:
+- 5-10 patients with varied medical histories
+- 3-5 doctors across different specializations
+- 10-15 appointments (past and upcoming)
+- 5-8 lab tests in catalog
+- 3-4 wards with 20+ beds
+- Sample billing records
+
+DEPLOYMENT CONSIDERATIONS:
+- Single HTML artifact with all functionality
+- No external dependencies except CDN libraries
+- Self-contained and immediately functional
+- Clear user guide in comments
+- Demo credentials for each role
+
+Build this as a production-ready prototype that demonstrates all core hospital management workflows end-to-end. Focus on functionality, data persistence, and user experience. Make it comprehensive enough to showcase to stakeholders while being maintainable and extensible.
